@@ -1,0 +1,36 @@
+{
+    "name": "info340labsandtutorials",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "1": "mdx-deck lab1/deck.mdx",
+        "2": "mdx-deck lab2/deck.mdx",
+        "3": "mdx-deck lab3/deck.mdx",
+        "4": "mdx-deck lab4/deck.mdx",
+        "5": "mdx-deck lab5/deck.mdx",
+        "6": "mdx-deck lab6/deck.mdx",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "b1": "mdx-deck build lab1/deck.mdx",
+        "b2": "mdx-deck build lab2/deck.mdx",
+        "b3": "mdx-deck build lab3/deck.mdx",
+        "b4": "mdx-deck build lab4/deck.mdx",
+        "b5": "mdx-deck build lab5/deck.mdx",
+        "b6": "mdx-deck build lab6/deck.mdx"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kwokwilliam/info340labsandtutorials.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kwokwilliam/info340labsandtutorials/issues"
+    },
+    "homepage": "https://github.com/kwokwilliam/info340labsandtutorials#readme",
+    "devDependencies": {
+        "mdx-deck": "^1.6.4",
+        "mdx-deck-code-surfer": "^0.1.2",
+        "raw-loader": "^0.5.1"
+    }
+}

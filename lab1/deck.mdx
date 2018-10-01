@@ -1,0 +1,157 @@
+import Box from 'superbox'
+import {Appear} from 'mdx-deck'
+export { default as theme } from '../theme'
+
+# Lab 1
+--------
+## Introductions and setup
+
+---
+
+
+<Box
+    css={{textAlign: 'left', width: '90vw'}}>
+    <div style={{fontSize: 90, fontWeight: 'bold'}}>Agenda</div>
+    <hr />
+    <ul style={{fontSize: 50}}>
+        <Appear>
+        {['Introductions',
+        'Events',
+        'Getting set up + refreshers',
+        'gh-pages', 
+        'Uploading to student server', 
+        'Submitting pull requests', 
+        'Work time!'].map(d=> <li key={d}>{d}</li>)}
+        </Appear>
+    </ul>
+</Box>
+
+```notes
+'Introductions', 
+'Getting set up + refreshers',
+'gh-pages', 
+'Uploading to student server', 
+'Submitting pull requests', 
+'Work time!'
+```
+---
+
+<Box
+    css={{textAlign: 'left', width: '90vw'}}>
+    <div style={{fontSize: 90, fontWeight: 'bold'}}>Who am I?</div>
+    <hr />
+    <ul style={{fontSize: 40}}>
+        <Appear>
+        {['Junior, freshly admitted to the Informatics Department',
+'New to TAing',
+'Fact about me: I love robotics. Led 6 years of VEX Robotics through Middle to High School and 2 years of FRC in High School',
+'Extensive experience with JavaScript and frameworks and stuff. This presentation is made (lazily) in JavaScript!',
+'Working in the Code and Cognition Lab led by Dr. Andy Ko, doing lots of client side development and research',
+'iGEM Lead Hardware/Software Engineer and Web Dev guy',
+'I play video games in my free time'].map(d=> <li key={d}>{d}</li>)}
+</Appear>
+    </ul>
+</Box>
+
+```notes
+'Junior, freshly admitted to the Informatics Department',
+'New to TAing',
+'Fact about me: I love robotics. Led 6 years of VEX Robotics through Middle to High School and 2 years of FRC in High School',
+'Extensive experience with JavaScript and frameworks and stuff. This presentation is made (lazily) in JavaScript!',
+'Working with in the Code and Cognition Lab led by Dr. Andy Ko, doing lots of client side development and research',
+'iGEM Lead Hardware/Software Engineer and Web Dev guy',
+'I play video games in my free time'
+```
+---
+
+# Events and stuff
+
+- Consulting Resume Reviews (Odegaard 220, 12:30-2pm October 2)
+- Grant Thornton iLounge Hangout (iLounge, 9-11am October 3)
+- First Year IUGA Rep meet and greet (12:30-1:30pm October 3, see IUGA facebook for more details)
+- West Monroe Partners iLounge Hangout (iLounge, 9-11am October 4)
+- Navigating a Career Fair workshop (iLounge, 12:30-1:20pm October 4)
+
+---
+
+<Box
+    css={{textAlign: 'left', width: '90vw'}}>
+    <div style={{fontSize: 90, fontWeight: 'bold'}}>Getting set up</div>
+    <hr />
+    <ul style={{fontSize: 40}}>
+        <Appear>
+        <li><a style={{textDecoration: 'none', color: 'gray'}}href="https://code.visualstudio.com/">Visual Studio <u>Code</u></a></li>
+        <ul style={{fontSize: 34}}>
+            <li>Has a bunch of useful native features as well as variety of add ons</li>
+        </ul>
+        <li>Terminal on Mac or <a style={{textDecoration: 'none', color: 'gray'}}href="https://git-scm.com/downloads">Git Bash</a> for windows </li>
+        <ul style={{fontSize: 34}}>
+            <li>Windows may need Git Credential manager</li>
+        </ul>
+        <li><a style={{textDecoration: 'none', color: 'gray'}}href="https://nodejs.org/en/">NodeJS</a> (comes with NPM)</li>
+        <li><pre style={{margin: '0'}}>npm i -g jest</pre> (i is for 'install', g is for 'global')</li>
+        <li>Find a more detailed list here in chapter 1 of the text</li> {/* TODO LINK */}
+        </Appear>
+    </ul>
+</Box>
+
+```notes
+VSCode
+Terminal/Gitbash
+nodejs
+npm i -g jest
+find more detailed list
+```
+---
+
+# NodeJS
+
+```notes
+**Node** is a JavaScript runtime, which can be compared to Java. JavaScript has a ton of [different engines] that compiles your code and runs it. Node uses the V8 engine. I don't know of the huge performance differences and it doesn't really matter to us in the context of this class, but it's kinda neat seeing what powers everything under the hood. Sometimes you'll see me (William) using this without any HTML, but don't worry about it for now.
+```
+
+---
+
+# NPM (and Yarn)
+
+```notes
+**NPM** is one of the main package managers for JavaScript. We'll be using it mostly, but know that you can mostly interchange NPM and [Yarn]. You can install yarn from its direct competition, npm. Or you can download it from yarn's website. You'll see people use one or the other if you watch youtube tutorials. Doesn't really matter too much. The packages usually are up to date on both package managers.
+```
+
+---
+
+# Live-server
+
+```notes
+**live-server** is a package that runs a little development server in the directory you started it on. It allows for live reload. You will be using it for the first few things, but eventually will not be needing this.
+```
+
+---
+
+# gh-pages
+
+* `git checkout -b gh-pages`
+* `git add _____`
+* `git commit -m "_____"`
+* `git push --set-upstream origin gh-pages`
+
+```notes
+**gh-pages** - Will be a package you use later on too, but forget about that for now. Right now, just have an index.html file on that branch, and you can upload it to the student server pretty seamlessly.
+```
+
+---
+
+# Student server demo
+-----
+## Instructions [here](./lab1.md), video [here](https://www.youtube.com/watch?v=ArBbaJ4PnAQ)
+
+---
+
+```git
+mkdir work
+cd work
+git init
+touch work.md
+git add work.md
+git commit -m "work"
+```
