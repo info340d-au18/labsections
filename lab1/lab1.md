@@ -23,7 +23,7 @@ Mac users can use terminal without any huge issues with development. Unsure if g
     2. Windows will need git bash or PuTTY as I said above. [PuTTY download](https://www.chiark.greenend.org.uk/~sgtatham/putty/)
     3. `ssh uwnetid@vergil.u.washington.edu`, use your netid password.
 4. Transferring files
-    1. Use the github repo you made. You can for now either have it in your main branch or your new gh-pages branch.
+    1. You will be using the github repo that contains the site you want to upload (with an index.html file in the main directory of it).
     2. In the SSH terminal, clone the repo using the ssh option on github.
         1. You most likely will need an SSH key. Will be making instructions for git bash, unsure of how it is for PuTTY. Instructions [here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
         2. When logged into the student server, do `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`. Use the email that you used for your github account. 
