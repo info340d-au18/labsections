@@ -1,0 +1,18 @@
+.search {
+    font-size: 90px;
+    color: red;
+    text-shadow: 10px 10px 10px green;
+}
+
+/* Import font by @import */ 
+@import url('https://fonts.googleapis.com/css?family=Charmonman');
+
+/* Import font by @font-face */
+@font-face {
+    font-family: "CharmonmanTest";
+    src: url(Charmonman-Regular.ttf) format('truetype');
+}
+
+.charmonman {
+    font-family: 'CharmonmanTest', cursive;
+}
