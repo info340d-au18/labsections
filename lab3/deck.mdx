@@ -1,0 +1,92 @@
+import Box from 'superbox'
+import {Appear} from 'mdx-deck'
+export { default as theme } from '../theme'
+
+# Lab 3
+--------
+## JavaScript basics, lots of work time
+
+---
+
+# Events
+
+* Technical interview workshop with Karat.io
+* Cybersecurity case studies
+* Microsoft iLounge hangout
+* Avanade Information session
+
+---
+
+# File stream
+
+* `import fs from 'fs'` <- will not unless you use certain things that I wont get into today
+* `const fs = require('fs')`
+
+---
+
+# Dev console
+
+* console commands (https://developer.mozilla.org/en-US/docs/Web/API/Console)
+---
+
+# Why is this awesome?
+
+* Easy access
+
+```notes
+easy access!
+```
+
+---
+
+<Box>
+    <div >
+        <img src={'./jspatrick.png'} style={{height: '1000px'}}/>
+    </div>
+</Box>
+
+---
+
+<Box>
+    <div>
+        <img src={'./cvjs.jpg'} style={{height: '800px'}}/>
+    </div>
+</Box>
+---
+
+<Box>
+    <div>
+        <img src={'./chickenOrEgg.png'} style={{height: '300px'}}/>
+    </div>
+</Box>
+
+---
+
+# For fun
+
+[jsf**k.com](http://www.jsfuck.com/)
+
+---
+
+```javascript
+let work = "work";
+work = work.split("");
+console.table(work);
+```
+
+<Box>
+    <div>
+        <table style={{width: '100%'}}>
+            <tr >
+                <th style={{width: '50%', borderBottom: '2px solid white', borderRight: '2px solid white'}}>(index)</th>
+                <th style={{borderBottom: '2px solid white', borderLeft: '2px solid white'}}>Value</th>
+            </tr>
+            {"work".split("").map((d,i) => {
+                return <tr>
+                    <th style={{borderRight: '2px solid white'}}>{i}</th>
+                    <th style={{borderLeft: '2px solid white'}}>{`"${d}"`}</th>
+                </tr>
+            })}
+        </table>
+    </div>
+</Box>
