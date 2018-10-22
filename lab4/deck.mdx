@@ -1,0 +1,80 @@
+import Box from 'superbox'
+import {Appear} from 'mdx-deck'
+export { default as theme } from '../theme'
+
+# Lab 4
+--------
+## M O R E J A V A S C R I P T  
+
+---
+
+# Events
+
+* Who went to dubhacks? JavaScript was everywhere!
+* ISACA and West Monroe Partners present: Conversation with a Cybersecurity Advisory Consultant
+* Liberty Mutual iLounge Hangout
+* Porch Information Session
+* Disney Tech Talk
+* IUGA Events, Game night, etc-- check IUGA facebook
+
+---
+
+# Announcements
+
+* Might be gone next week, depending on when flight gets back.
+* If not here, you can feel free to use the space as a workspace or just leave.
+
+---
+
+# const vs let vs var
+
+[Video](https://www.youtube.com/watch?v=sjyJBL5fkp8) by MPJ, ignore ES6 and what that means for now if you are confused
+
+---
+
+# Higher order functions
+
+[Video](https://www.youtube.com/watch?v=BMUiFMZr7vk) by MPJ
+
+---
+
+# `.map()`, `.reduce()`, `.filter()`
+
+[Video](https://www.youtube.com/watch?v=bCqtb-Z5YGQ) by MPJ
+
+---
+
+# Small example + Destructuring and spread operator 
+
+---
+
+## You should rarely ever have to write for loops in this class
+
+A for loop: `for(let i = 0; i < n; i++)`
+
+---
+
+## Arrow functions? 😤
+
+### Don't worry about knowing em yet, but you can use them
+
+---
+
+```javascript
+// same as saying `function work()`
+const work = () => {
+    let date = new Date();
+    let arr = ['w','o','r','k'];
+    let string = arr.map(d => 
+        `${d}/  /${date.toLocaleTimeString()}`
+    )
+    console.log(string.join('\\n'));
+}
+
+setInterval(() => {work()}, 1000);
+```
+import {Timer} from './timer'
+
+<Box>
+    <Timer />
+</Box>
