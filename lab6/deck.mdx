@@ -65,3 +65,65 @@ People make things for it, you can pull something off the internet
 
 ---
 
+# [jqueryExample](students.washington.edu/wkwok16/labsections/lab6exampleJquery)
+
+-----
+
+## [code](students.washington.edu/wkwok16/labsections/lab6exampleJquery/js/index.js)
+
+
+---
+
+<CodeSurfer
+    title="jQuery"
+    notes=""
+    code={require("!raw-loader!./jquery.js")}
+    showNumbers={true}
+    dark={true}
+    steps={
+        [
+            {range: [1,9], notes: "Pretty much all the HTML"},
+            {lines: [11], notes: "Our API endpoint" },
+            {range: [13,16], notes: "Set up a state"},
+            {range: [18,21], notes: "Whenever the input changes, change the state's max, then re-generate posts"},
+            {range: [23,47], notes: "Generate a single post. One $ is jQuery, another is a template literal. Know the difference!"},
+            {range: [49,57], notes: "Generate the post based on the range. Note how we have to empty it out ourselves then go again."},
+            {range: [59,67], notes: 'Fetching from endpoint. Sets state then generates the post'},
+            {range: [69, 70]},
+            {range: [1,70], notes: 'jQuery version is slow, it is re-rendering everything'},
+            {range: [1,70], notes: 'Imagine doing this all the time for large large applications. People actually did this long time ago!'},
+        ]
+    }
+/>
+
+---
+
+<CodeSurfer
+    title="React"
+    notes=""
+    code={require("!raw-loader!./react.js")}
+    language="jsx"
+    showNumbers={true}
+    dark={true}
+    steps={
+        [
+            {lines: [1,3], notes: "Import React, Component, and make a string for the endpoint, why do we import React when we don't use it?"},
+            {lines: [5], notes: "Create the app"},
+            {range: [6,12], notes: "constructor, set up the state similar to the jquery"},
+            {range: [14,17], notes: "Change the maximum from the input later on"},
+            {range: [19, 26], notes: "On mount, fetch and update the posts"},
+            {range: [28,66], notes: 'Render function-- let\'s break it up'},
+            {lines: [32], notes: 'The entire input-- when we change it, we invoke the function we made earlier'},
+            {lines: [32, 14,15,16,17], notes: 'The entire input-- when we change it, we invoke the function we made earlier'},
+            {range: [28,66], notes: 'Let\'s focus on the interesting part'},
+            {range: [33,62], notes: 'Let\'s focus on the interesting part'},
+            {range: [33,34], notes: 'If the length is 0, then also perform this next thing, sort of like a conditional'},
+            {range: [34, 35], notes: 'check it against the current max post'},
+            {lines: [36], notes: 'key'},
+            {range: [36, 57], notes: 'Exact same thing as earlier in the jQuery generateSinglePost method, but styling is a bit different, and no template literals'},
+            {ranges: [[38, 41],[48,49],[45,45]], notes: 'camel cased'},
+            {range: [28, 66], notes: ".map?"},
+            {lines: [68], notes: "export default?"}
+        ]
+    }
+/>
