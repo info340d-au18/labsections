@@ -30,7 +30,9 @@
     "homepage": "https://github.com/kwokwilliam/info340labsandtutorials#readme",
     "devDependencies": {
         "mdx-deck": "^1.6.4",
-        "mdx-deck-code-surfer": "^0.1.2",
         "raw-loader": "^0.5.1"
+    },
+    "dependencies": {
+        "mdx-deck-code-surfer": "^0.5.3"
     }
 }
