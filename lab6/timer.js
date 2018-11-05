@@ -8,7 +8,7 @@ export class Timer extends Component {
         }
 
         setInterval(() => {
-            this.setState({ time: new Date() })
+            this.setState({ time: new Date() });
         }, 500);
     }
     render() {
@@ -20,8 +20,8 @@ export class Timer extends Component {
                 margin: 'auto'
             }}
         >{['w', 'o', 'r', 'k'].map(d =>
-            <pre style={{ margin: 0 }}>>
-                    {d}/  /{this.state.time.toLocaleTimeString()}
+            <pre style={{ margin: 0 }}>
+                > {d}/  /{this.state.time.toLocaleTimeString()}
             </pre>)}
         </div>
     }
