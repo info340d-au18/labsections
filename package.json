@@ -10,13 +10,15 @@
         "4": "mdx-deck lab4/deck.mdx",
         "5": "mdx-deck lab5/deck.mdx",
         "6": "mdx-deck lab6/deck.mdx",
+        "7": "mdx-deck lab7/deck.mdx",
         "test": "echo \"Error: no test specified\" && exit 1",
         "b1": "mdx-deck build lab1/deck.mdx",
         "b2": "mdx-deck build lab2/deck.mdx",
         "b3": "mdx-deck build lab3/deck.mdx",
         "b4": "mdx-deck build lab4/deck.mdx",
         "b5": "mdx-deck build lab5/deck.mdx",
-        "b6": "mdx-deck build lab6/deck.mdx"
+        "b6": "mdx-deck build lab6/deck.mdx",
+        "b7": "mdx-deck build lab7/deck.mdx --no-html"
     },
     "repository": {
         "type": "git",

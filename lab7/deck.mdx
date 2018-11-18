@@ -1,0 +1,51 @@
+import Box from 'superbox'
+import {Appear} from 'mdx-deck'
+import { CodeSurfer } from 'mdx-deck-code-surfer';
+export { default as theme } from '../theme'
+
+# Lab 7
+--------
+## ES6: Async Await
+
+---
+
+# Async Await
+
+## Up and coming syntax, don't need to use for assignment!
+
+---
+
+<CodeSurfer
+    title="Async Await vs Promises"
+    notes=""
+    code={require("!raw-loader!./asyncawaitexample.js")}
+    showNumbers={true}
+    dark={true}
+    steps={
+        [
+            {range: [1,9], notes: "Regular fetch"},
+            {range: [11,20], notes: "With async"},
+            {lines: [1,11], notes: "Function instantiation"},
+            {lines: [2,13], notes: "Fetch"},
+            {lines: [3,14], notes: "get JSON"},
+            {ranges: [[4,7],[15,16]], notes: "Store and generate posts"},
+            {lines: [8,12,17,18,19], notes: "Catch error"}
+        ]
+    }
+/>
+
+---
+
+# Example use in regular and in React
+
+---
+
+```javascript
+let totalWorkDone = 0;
+async function fetchWork() {
+    let workDone = await fetch('work');
+    let workDoneJson = await workDone.json();
+    totalWorkDone += workDoneJson.count;
+    console.log(totalWorkDone);
+}
+```
