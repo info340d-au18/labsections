@@ -1,0 +1,139 @@
+import Box from 'superbox'
+import {Appear, Image} from 'mdx-deck'
+export { default as theme } from '../theme'
+import {Split} from 'mdx-deck/layouts'
+import {CodeSurfer} from 'mdx-deck-code-surfer';
+
+
+# Lab 6
+
+-----
+
+## Jest + Enzyme
+
+---
+
+# Questions?
+
+---
+
+# Jest
+
+---
+
+<CodeSurfer
+    title="Example"
+    notes=""
+    code={require("!raw-loader!./unittesting.js")}
+    showNumbers={false}
+    dark={true}
+    steps={
+        [
+            {range:[1,3], notes: "function we want to test"},
+            {range:[5,10], notes: "simple test format"},
+            {range: [12,15], notes: 'example of what we might want to test'}
+        ]
+    }
+/>
+
+---
+
+# Enzyme
+
+### Setup instructions [here](https://github.com/facebook/jest/issues/3094#issuecomment-385164816)
+
+```
+npm install -D enzyme
+npm install -D identity-obj-proxy
+npm install -D enzyme-adapter-react-16
+```
+
+---
+
+## Add to package.json
+
+<Box style={{textAlign: 'left', fontSize: 15}}>
+    <pre>
+{`"jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  }`}</pre>
+</Box>
+
+---
+
+# Create file
+
+`<rootDir>/__mocks__/fileMock.js`
+
+with
+
+`module.exports = 'test-file-stub'`
+
+---
+
+# Dependency Injection and Function Mocking
+
+```notes
+Some may have heard of dependency injection. 
+
+There is a series on it by MPJ on Youtube which will teach you some of the mindset in favor of it. 
+
+Function mocking is part of dependency injection. When unit testing, we want to isolate the problem to a specific function, and not worry much about any complicated moving parts.
+```
+
+---
+
+<CodeSurfer
+    title="Example"
+    notes=""
+    code={require("!raw-loader!./lab6.js")}
+    showNumbers={false}
+    dark={true}
+    steps={
+        [
+            {range:[1,4], notes: "Import everything"},
+            {lines: [6], notes: "Configure adapter" },
+            {range:[8,12], notes: "Without dependency injection"},
+            {range:[14,18], notes: "With dependency injection"},
+            {range:[20,37], notes: "In practice"},
+            {range:[39,58], notes: "Example code"},
+            {lines:[40], notes: "it()"},
+            {lines:[41], notes: "shallow and mount"},
+            {lines: [42], notes: 'jest.spyOn(), wrapper.instance()'},
+            {lines: [43], notes: 'expect'},
+            {range:[44,50], notes: 'just grabbing some values, calling a function, etc'},
+            {range:[52,55], notes: 'using wrapper.state'},
+            {lines: [57], notes: 'unmount'},
+            {range:[60,62], notes: 'misc'}
+        ]
+    }
+/>
+
+---
+
+```jsx
+describe('<App /> component', () => {
+    it('works', () => {
+        const wrapper = mount(<Work work={'work'}/>);
+        const work = jest.spyOn(wrapper.instance(), 'work');
+        expect(work).toHaveBeenCalledTimes(9999999);
+        wrapper.unmount();
+    })
+});
+```
+<Box>
+    <div style={{textAlign: 'center'}}><pre style={{margin: 'auto', textAlign: 'left'}}>
+        <span style={{backgroundColor: 'red', color: 'black', paddingLeft: 20, paddingRight: 20}}>FAIL</span> src/App.test.js<br/>
+        <span style={{paddingLeft: 40}}>{'<App /> component'}<br /></span>
+        <span style={{paddingLeft: 76}}><span style={{color: 'red'}}>x</span> works</span><br />
+        <span style={{paddingLeft: 40, color: 'red'}}>{'● <App /> component > works'}</span><br />
+        <span style={{paddingLeft: 76}}>expect(<span style={{color: 'red'}}>received</span>).toBe(<span style={{color: 'green'}}>expected</span>)</span><br />
+        <span style={{paddingLeft: 76}}>Expected: <span style={{color: 'green'}}>9999999</span></span><br />
+        <span style={{paddingLeft: 76}}>Received: <span style={{color: 'red'}}>10000000</span></span>
+        
+    </pre>
+    </div>
+</Box>
